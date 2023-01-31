@@ -19,9 +19,8 @@ export const useCalendarStore = () => {
   };
 
   const startDeletingEvent = () => {
-    dispatch(onDeleteEvent);
-  }
-
+    dispatch(onDeleteEvent());
+  };
 
   return {
     //Props
