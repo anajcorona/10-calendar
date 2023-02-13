@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
+import { useEffect } from 'react'
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { LoginPage } from '../auth/pages/LoginPage';
 import { CalendarPage } from '../calendar/pages/CalendarPage';
 import { useAuthStore } from '../hooks';
 
-
 export const AppRouter = () => {
 
   const {status, checkAuthToken} = useAuthStore();
+  // const appStatus = 'not-authenticated'; // 'not-authenticated';
 
   useEffect(() => {
     checkAuthToken();
@@ -18,8 +18,6 @@ export const AppRouter = () => {
       <h3>Cargando...</h3>
     )
   }
-  
-    // const appStatus = 'not-authenticated'; // 'not-authenticated';
 
   return (
     <Routes>
@@ -36,11 +34,8 @@ export const AppRouter = () => {
                 <Route path='/' element={ <CalendarPage /> } />
                 <Route path='/*' element={ <Navigate to="/" /> } />
               </>
-            )
-            
+            )   
         }
-        
-
     </Routes>
   )
 }

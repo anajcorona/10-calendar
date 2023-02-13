@@ -32,13 +32,11 @@ export const LoginPage = () => {
             Swal.fire('Error en registro', 'Contraseñas no son iguales', 'error');
             return;
         }
-        console.log({registerName, registerEmail, registerPassword, registerPassword2});
         startRegister({name:registerName, email:registerEmail, password:registerPassword});
     };
 
     useEffect(() => {
       if (errorMessage !== undefined) {
-        console.log('errorMessage', errorMessage);
         Swal.fire('Error en la autenticación', errorMessage, 'error');
       }
     }, [errorMessage])
