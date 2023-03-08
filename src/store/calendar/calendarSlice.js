@@ -3,14 +3,14 @@ import { isExists } from 'date-fns';
 // import { addHours } from 'date-fns';
 
 // const tempEvent = {
-//     _id: new Date().getTime(), 
+//     id: new Date().getTime(), 
 //     title: 'Cumpleaños del Jefe',
 //     notes: 'Hay que comprar el pastel',
 //     start: new Date(),
 //     end: addHours(new Date(), 2),
 //     bgColor: '#fafafa',
 //     user: {
-//       _id: '123',
+//       id: '123',
 //       name: 'Ana Corona'
 //     }
 // };
